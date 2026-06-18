@@ -1,8 +1,8 @@
 # NPS-OpenWrt
 
-[NPS](https://github.com/djylb/nps) OpenWrt repository
+[NPS](https://github.com/mia-clark/nps) OpenWrt repository
 
-[NPS](https://github.com/djylb/nps) 的 OpenWrt 仓库
+[NPS](https://github.com/mia-clark/nps) 的 OpenWrt 仓库
 
 ---
 
@@ -13,7 +13,7 @@
    uname -m
    ```
 
-2. Download the `.ipk` file from the [Release](https://github.com/djylb/nps-openwrt/releases) / 从[发布页面](https://github.com/djylb/nps-openwrt/releases)下载 `.ipk` 文件.
+2. Download the `.ipk` file from the [Release](https://github.com/mia-clark/nps-openwrt/releases) / 从[发布页面](https://github.com/mia-clark/nps-openwrt/releases)下载 `.ipk` 文件.
 
 3. Install with `opkg` / 使用 `opkg` 安装:
    ```bash
@@ -31,7 +31,7 @@
 
 1. Edit `feeds.conf` and add the NPS source / 编辑 `feeds.conf` 文件，添加 NPS 源:
    ```bash
-   echo "src-git nps https://github.com/djylb/nps-openwrt.git" >> feeds.conf
+   echo "src-git nps https://github.com/mia-clark/nps-openwrt.git" >> feeds.conf
    ```
 
 2. Update feeds and install the NPS package / 更新 feeds 并安装 NPS 包:

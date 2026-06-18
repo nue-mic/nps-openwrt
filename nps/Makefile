@@ -9,7 +9,7 @@ PKG_LICENSE:=Apache-2.0
 PKG_MAINTAINER:=Duan <duan@d-jy.net>
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-$(PKG_VERSION)
 
-NPS_URL=https://github.com/djylb/nps
+NPS_URL=https://github.com/mia-clark/nps
 
 NPS_ARCH:=
 ifeq ($(ARCH),x86_64)

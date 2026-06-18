@@ -68,7 +68,7 @@ install_button = s:option(Button, "install_button", translate("Install NPS"), tr
 install_button.modal = false
 function install_button.write(self, section, value)
 	luci.http.redirect(luci.dispatcher.build_url("admin", "services", "nps"))
-	luci.sys.call("( wget -qO- https://fastly.jsdelivr.net/gh/djylb/nps@master/install.sh | sh -s nps && /etc/init.d/nps restart ) >/tmp/nps_install.log 2>&1 &")
+	luci.sys.call("( wget -qO- https://fastly.jsdelivr.net/gh/mia-clark/nps@master/install.sh | sh -s nps && /etc/init.d/nps restart ) >/tmp/nps_install.log 2>&1 &")
 end
 
 default_button = s:option(Button, "default_button", translate("Default Config"), translate("Clicking this button will replace the current configuration with the default configuration file."))
@@ -88,11 +88,11 @@ function default_button.write(self, section, value)
 	luci.http.redirect(luci.dispatcher.build_url("admin", "services", "nps"))
 end
 
-github_button = s:option(Button, "github_button", "Github", "https://github.com/djylb/nps-openwrt")
+github_button = s:option(Button, "github_button", "Github", "https://github.com/mia-clark/nps-openwrt")
 github_button.modal = false
 function github_button.write(self, section, value)
 	luci.http.status(200)
-	luci.http.redirect("https://github.com/djylb/nps-openwrt")
+	luci.http.redirect("https://github.com/mia-clark/nps-openwrt")
 end
 
 return m
