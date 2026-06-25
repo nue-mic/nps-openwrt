@@ -21,7 +21,7 @@ jobs:
       - name: Get latest version
         id: version
         run: |
-          latest=$(curl -s https://api.github.com/repos/mia-clark/nps/releases/latest | jq -r .tag_name)
+          latest=$(curl -s https://api.github.com/repos/nue-mic/nps/releases/latest | jq -r .tag_name)
           version=${latest#v}
           echo "Latest NPS version: $version"
           echo "LATEST_VERSION=$version" >> $GITHUB_ENV
@@ -55,7 +55,7 @@ jobs:
           for i in $(seq 0 $last_index); do
             arch="${arch_list[$i]}"
             file="linux_${arch}_client.tar.gz"
-            url="https://github.com/mia-clark/nps/releases/download/v${{ env.LATEST_VERSION }}/$file"
+            url="https://github.com/nue-mic/nps/releases/download/v${{ env.LATEST_VERSION }}/$file"
             echo "Downloading $file..."
             if curl -sLO "$url"; then
               hash=$(sha256sum "$file" | awk '{print $1}')
@@ -85,7 +85,7 @@ jobs:
           for i in $(seq 0 $last_index); do
             arch="${arch_list[$i]}"
             file="linux_${arch}_server.tar.gz"
-            url="https://github.com/mia-clark/nps/releases/download/v${{ env.LATEST_VERSION }}/$file"
+            url="https://github.com/nue-mic/nps/releases/download/v${{ env.LATEST_VERSION }}/$file"
             echo "Downloading $file..."
             if curl -sLO "$url"; then
               hash=$(sha256sum "$file" | awk '{print $1}')
